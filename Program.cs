@@ -14,7 +14,11 @@ user_name = Console.ReadLine() ?? "";
 
 if (string.IsNullOrEmpty(user_name))
 {
-    Console.WriteLine("Please enter your name:");
+    while (string.IsNullOrEmpty(user_name))
+    {
+        Console.WriteLine("Please enter a valid name:");
+        user_name = Console.ReadLine() ?? "";
+    }
 }
 else
 {
